@@ -3,7 +3,7 @@ import hidden_discovery_4
 
 
 def print_all_names():
-    for i in dir(hidden_discovery_4):
+    for i in sorted(dir(hidden_discovery_4)):
         if i[:2] != "__":
             print(i)
 

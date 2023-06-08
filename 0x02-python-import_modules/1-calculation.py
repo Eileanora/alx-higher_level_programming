@@ -11,5 +11,5 @@ def main():
     print(f"{a} / {b} = {calc.div(a, b)}")
 
 
-if __name__ == __main__:
+if __name__ == "__main__":
     main()
