@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module 1-rectangle: add attributes"""
 
+
 class Rectangle:
     """"Defines a rectangle"""
     def __init__(self, width=0, height=0):
@@ -12,12 +13,12 @@ class Rectangle:
     def width(self):
         """Getter for width"""
         return self.__width
-    
+
     @property
     def height(self):
         """Getter for height"""
         return self.__height
-    
+
     @width.setter
     def width(self, value):
         """Setter for width"""
@@ -26,7 +27,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-    
+
     @height.setter
     def height(self, value):
         """Setter for height"""
@@ -39,7 +40,7 @@ class Rectangle:
     def area(self):
         """Return area of rectangle"""
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """Return perimeter of rectangle"""
         if self.__width == 0 or self.__height == 0:
