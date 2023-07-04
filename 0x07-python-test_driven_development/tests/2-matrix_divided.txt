@@ -1,0 +1,74 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+Importing function from the module
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Testing docstring
+    >>> if len(matrix_divided.__doc__) > 1:
+    ...    None
+    >>> if len(matrix_divided.__doc__) > 1:
+    ...    None
+
+Testing errors
+
+Typeerrors
+    >>> matrix = [[1, 2, 2.3 , True, "hello"]]
+    >>> matrix_divided(2, 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Check none
+    >>> matrix_divided(None, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+    >>> list_of_elements = [1, 2, 3]
+    >>> matrix_divided(list_of_elements, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided(matrix, matrix)
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+    >>> matrix = [[1, 2, 3], [4, 5]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+Check run values
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 2)
+    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+    
+    >>> matrix = [[2, 4, 6], [8, 10, 12]]
+    >>> matrix_divided(matrix, 2)
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+    >>> matrix = [[2, 4, 6], [8, 10, 12]]
+    >>> matrix_divided(matrix, 3)
+    [[0.67, 1.33, 2.0], [2.67, 3.33, 4.0]]

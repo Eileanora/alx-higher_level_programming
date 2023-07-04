@@ -1,0 +1,57 @@
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
+
+Importing function from the module
+    >>> print_square = __import__("4-print_square").print_square
+
+Testing docstring
+    >>> if len(print_square.__doc__) > 1:
+    ...    None
+    >>> if len(print_square.__doc__) > 1:
+    ...    None
+
+Testing TypeError
+    >>> print_square("a")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Testing with None as argument
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+With float less than 0
+    >>> print_square(-1.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+Testing valueError
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be >= 0
+
+
+Testing normal casses
+    >>> print_square(0)
+    >>> print_square(1)
+    #
+    >>> print_square(2)
+    ##
+    ##
+    >>> print_square(3)
+    ###
+    ###
+    ###
+
+Testing edge casses
+    >>> print_square(1.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
