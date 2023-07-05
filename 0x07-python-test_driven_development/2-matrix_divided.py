@@ -5,21 +5,23 @@
 def matrix_divided(matrix=[[1]], div=1):
     """Function that divides all elements of a matrix."""
 
-    error_msg = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) is not list or matrix is None:
-        raise TypeError(error_msg)
+        raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
 
     if type(div) is not int and type(div) is not float or div is None:
         raise TypeError("div must be a number")
 
     for row in matrix:
         if type(row) is not list:
-            raise TypeError(error_msg)
+            raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
 
     for row in matrix:
         for element in row:
             if type(element) is not int and type(element) is not float:
-                raise TypeError(error_msg)
+                raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
 
     for row in matrix:
         if len(row) != len(matrix[0]):
