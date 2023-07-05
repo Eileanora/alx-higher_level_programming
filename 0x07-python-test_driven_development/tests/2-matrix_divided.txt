@@ -72,3 +72,4 @@ Check run values
     >>> matrix = [[2, 4, 6], [8, 10, 12]]
     >>> matrix_divided(matrix, 3)
     [[0.67, 1.33, 2.0], [2.67, 3.33, 4.0]]
+

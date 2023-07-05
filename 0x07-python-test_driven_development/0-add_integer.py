@@ -2,7 +2,7 @@
 """Module for a function that adds 2 integers."""
 
 
-def add_integer(a, b=98):
+def add_integer(a=0, b=98):
     """Function that adds 2 integers."""
 
     if type(a) is not int and type(a) is not float:
