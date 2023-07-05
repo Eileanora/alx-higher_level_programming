@@ -14,12 +14,12 @@ Testing docstring
     ...    None
 
 Check TypeError
-    >>> say_my_name(1, "jhon")
+    >>> say_my_name(1, "john")
     Traceback (most recent call last):
         ...
     TypeError: first_name must be a string
 
-    >>> say_my_name("jhon", 1)
+    >>> say_my_name("john", 1)
     Traceback (most recent call last):
         ...
     TypeError: last_name must be a string
@@ -33,7 +33,7 @@ Check TypeError
         ...
     TypeError: first_name must be a string
 
-    >>> say_my_name("jhon", None)
+    >>> say_my_name("john", None)
     Traceback (most recent call last):
         ...
     TypeError: last_name must be a string
@@ -44,5 +44,12 @@ Check TypeError
     TypeError: first_name must be a string
 
 Check output
-    >>> say_my_name("jhon", "doe")
-    My name is jhon doe
+    >>> say_my_name("john", "doe")
+    My name is john doe
+
+Missing arguments
+    >>> say_my_name("john")
+    My name is john 
+
+    >>> say_my_name()
+    My name is  
