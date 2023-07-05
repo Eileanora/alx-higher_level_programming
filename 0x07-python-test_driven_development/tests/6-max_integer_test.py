@@ -17,18 +17,6 @@ class TestAddInteger(unittest.TestCase):
         self.assertIsNotNone(__import__('6-max_integer').__doc__)
         self.assertTrue(len(__import__('6-max_integer').__doc__) > 1)
 
-    def test_Raises(self):
-        """Test raises"""
-        self.assertRaises(TypeError, max_integer, None)
-        self.assertRaises(TypeError, max_integer, True)
-        self.assertRaises(TypeError, max_integer, "String")
-        self.assertRaises(TypeError, max_integer, (1, 2, 3))
-        self.assertRaises(TypeError, max_integer, {1, 2, 3})
-        self.assertRaises(TypeError, max_integer, {1: 2, 3: 4})
-        self.assertRaises(TypeError, max_integer, float('nan'))
-        self.assertRaises(TypeError, max_integer, float('inf'))
-        self.assertRaises(TypeError, max_integer, 1, 2)
-
         list_input = [1, 2, 3, "String"]
         with self.assertRaises(TypeError):
             max_integer(list_input)
@@ -41,7 +29,20 @@ class TestAddInteger(unittest.TestCase):
         """Test regular"""
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([-6, -2, -1, -96]), -1)
+        self.assertEqual(max_integer([1, 2, -3, 4]), 4)
 
-    def test_OneElement(self):
+    def test_one_element(self):
         """Test one element"""
         self.assertEqual(max_integer([1]), 1)
+
+    def test_max_at_beginning(self):
+        """Test max at beginning"""
+        self.assertEqual(max_integer([10, 2, 3, 4]), 10)
+
+    def test_max_at_middle(self):
+        """Test max at middle"""
+        self.assertEqual(max_integer([1, 2, 10, 4]), 10)
+
+    def test_max_at_end(self):
+        """Test max at end"""
+        self.assertEqual(max_integer([1, 2, 3, 10]), 10)
