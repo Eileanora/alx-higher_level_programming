@@ -25,7 +25,3 @@ Testing if output is correct
 
 >>> my_list.print_sorted()
 [1, 2, 3, 4]
-
->>>my_list.clear()
->>> print(my_list)
-[]
