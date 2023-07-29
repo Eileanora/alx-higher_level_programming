@@ -1,0 +1,31 @@
+The ``1-my_list`` module
+======================
+
+Using ``print_sorted``
+-------------------
+
+Importing class from the module
+>>> MyList = __import__("1-my_list").MyList
+
+Testing docstring
+>>> print(MyList.__doc__)
+Class that inherits from list
+>>> print(MyList.print_sorted.__doc__)
+Function that returns the list, but in sorted order
+
+Testing if output is correct
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+
+>>> print(my_list)
+[1, 4, 2, 3]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
+
+>>>my_list.clear()
+>>> print(my_list)
+[]
