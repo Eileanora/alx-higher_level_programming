@@ -1,1 +1,9 @@
 #!/usr/bin/python3
+'''Module for save_to_json_file method.'''
+import json
+
+
+def save_to_json_file(my_obj, filename):
+    '''Method for writing an object to a text file using JSON representation'''
+    with open(filename, 'w') as f:
+        json.dump(my_obj, f)
