@@ -9,9 +9,10 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     # create engine
-    password = quote_plus(argv[2])
-    engine = create_engine('mysql+mysqldb://{argv[1]}:{password}\
-                           @localhost/{argv[3]}', pool_pre_ping=True)
+    passwd = quote_plus(argv[2])
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(argv[1], passwd, argv[3]),
+                           pool_pre_ping=True)
 
     # generate database (if not exist)
     Base.metadata.create_all(engine)
