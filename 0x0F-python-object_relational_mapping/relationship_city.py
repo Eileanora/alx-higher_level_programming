@@ -3,9 +3,7 @@
 State table'''
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import declarative_base
-
-
-Base = declarative_base()
+from relationship_state import Base, State
 
 
 class City(Base):
