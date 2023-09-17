@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''script that lists all state objects that contains letter a'''
 from sys import argv
-from model_state import Base, states
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from urllib.parse import quote_plus
@@ -17,9 +17,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = (session.query(states)
-              .filter(states.name.like('%a%'))
-              .order_by(states.id).all())
+    states = (session.query(State)
+              .filter(State.name.like('%a%'))
+              .order_by(State.id).all())
 
     for state in states:
         print("{}: {}".format(state.id, state.name))
