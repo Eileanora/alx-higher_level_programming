@@ -5,8 +5,8 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    repository = 'rails'
-    owner = 'rails'
+    repository = argv[1]
+    owner = argv[2]
     url = "https://api.github.com/repos/{}/{}/commits".format(
         owner, repository)
     response = requests.get(url)
