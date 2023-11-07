@@ -10,6 +10,6 @@
 <li>How to manipulate data from an external service</li>
 
 ## Resources
-<li><a href="/rltoken/KoRrs5dVWsb-B82e-M1TQQ" target="_blank" title="HOWTO Fetch Internet Resources Using urllib Package">HOWTO Fetch Internet Resources Using urllib Package</a> </li>
-<li><a href="/rltoken/OGcRGPr7TSWtzypDd0ZibQ" target="_blank" title="Quickstart with Requests package">Quickstart with Requests package</a> </li>
-<li><a href="/rltoken/dUNaNQrV2bMSstILitQbXQ" target="_blank" title="Requests package">Requests package</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/KoRrs5dVWsb-B82e-M1TQQ" target="_blank" title="HOWTO Fetch Internet Resources Using urllib Package">HOWTO Fetch Internet Resources Using urllib Package</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/OGcRGPr7TSWtzypDd0ZibQ" target="_blank" title="Quickstart with Requests package">Quickstart with Requests package</a> </li>
+<li><a href="https://intranet.alxswe.com/rltoken/dUNaNQrV2bMSstILitQbXQ" target="_blank" title="Requests package">Requests package</a> </li>
